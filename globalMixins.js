@@ -1,4 +1,4 @@
-require('babel-register');
+require('@babel/register');
 require('app-module-path').addPath(process.cwd());
 
 const assign = require('lodash/assign');

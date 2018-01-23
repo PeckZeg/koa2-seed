@@ -6,6 +6,7 @@ const isFunction = require('lodash/isFunction');
 const toLower = require('lodash/toLower');
 const replace = require('lodash/replace');
 const compact = require('lodash/compact');
+const has = require('lodash/has');
 
 const types = {
   'client': ''
@@ -13,8 +14,6 @@ const types = {
 
 const ignore = '_**';
 let routers = [];
-
-// const rmDirSlash = pathname => toLower(replace(pathname, /\/$/, ''));
 
 for (let type of glob.sync('*/', { cwd: __dirname, ignore })) {
   type = toLower(replace(type, /\/$/, ''));
@@ -24,8 +23,8 @@ for (let type of glob.sync('*/', { cwd: __dirname, ignore })) {
     category = toLower(replace(category, /\/$/, ''));
 
     const cwd = path.join(__dirname, type, category);
-    const prefix = `/${types[type] ?types[type] : type}/${category}`;
-    const router = new Router({ prefix });
+    const prefix = has(types, type) ? types[type] : `${type}/`;
+    const router = new Router({ prefix: `/${prefix}${category}` });
 
     for (let method of glob.sync('*/', { cwd, ignore })) {
       method = toLower(replace(method, /\/$/, ''));

@@ -1,0 +1,1 @@
+exports.folders = require('./folders');
