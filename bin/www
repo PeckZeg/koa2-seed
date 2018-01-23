@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+require('../globalMixins');
+
+const debug = require('debug')('www');
+const chalk = require('chalk');
+const app = require('../app');
+
+const { NODE_ENV = 'development', PORT = config.port } = process.env;
+
+app.listen(PORT, () => {
+  debug(`App run on ${chalk.blue(NODE_ENV)} Env, Port: ${chalk.blue(PORT)}`);
+});
