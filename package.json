@@ -7,25 +7,27 @@
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
-    "debug": "~2.6.8",
+    "debug": "^3.1.0",
+    "glob": "^7.1.2",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-combine-routers": "^2.0.1",
     "koa-convert": "^1.2.0",
+    "koa-etag": "^3.0.0",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.0.0",
-    "koa-onerror": "^3.1.0",
+    "koa-onerror": "^4.0.0",
     "koa-router": "^7.2.1",
-    "koa-static": "^3.0.0",
+    "koa-static": "^4.0.2",
     "koa-views": "^6.0.2",
     "nunjucks": "~3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "7.1.1",
+    "babel-eslint": "^8.2.1",
     "babel-register": "^6.26.0",
     "chalk": "^2.3.0",
-    "eslint": "3.18.0",
+    "eslint": "^4.16.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "koa-combine-routers": "^2.0.1"
+    "eslint-plugin-promise": "^3.6.0"
   }
 }
