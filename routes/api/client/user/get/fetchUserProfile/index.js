@@ -1,4 +1,4 @@
-exports.pathname = '/';
+exports.pathname = '/:userId';
 
 exports.handler = async function(ctx) {
   ctx.body = {

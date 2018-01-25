@@ -1,9 +1,10 @@
-exports.pathname = '/';
+exports.pathname = '/:userId';
 
 exports.handler = async function(ctx) {
   ctx.body = {
     pathname: ctx.url,
     params: ctx.params,
-    query: ctx.query
+    query: ctx.query,
+    body: ctx.request.body
   };
 };

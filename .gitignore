@@ -48,5 +48,3 @@ Temporary Items
 
 package-lock.json
 node_modules
-.sass-cache
-data/contact.json
